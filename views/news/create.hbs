@@ -1,0 +1,29 @@
+<h2>Create Article</h2>
+
+<div class='row'>
+  <form action='/news/create/{{id}}' method='post' enctype='multipart/form-data'>
+    <div class='form-group'>
+      <label for='title'>
+        Title:
+        <input type='text' name='title' class='form-control' />
+      </label>
+    </div>
+    <div class='form-group'>
+      <label for='image'>
+        News Image:
+        <input type='file' name='imageUrl' class='form-control-file' />
+      </label>
+    </div>
+       <div class='form-group'>
+      <label for='description'>
+        Description
+        <textarea name='description' cols='30' rows='10' class='form-control'></textarea>
+      </label>
+    </div>
+
+
+
+    <button type='submit' class='btn btn-primary'>Add News</button>
+  </form>
+
+</div>

@@ -8,8 +8,14 @@ const newsSchema = new Schema(
         required: true,
       },
       description: String,
-      imageUrl: String,
-      author: userSchema.Types.ObjectId,
+      imageUrl: {
+        type: String, 
+        default: 'https://cdn.easywebsites.co.uk/atlas/images/frontend/news-default.png'
+      },
+      author: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      },
     },
     {
       timestamps: true,
