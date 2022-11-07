@@ -1,12 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "PT Serif", serif;
+  background-color: #f0f0f0;
+  color: #383838;
+  padding: 20px;
 }
 
-a {
-  color: #00b7ff;
+.time {
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  font-size: 1.6em;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 5px;
+  font-weight: 700;
 }
 
-h1 {
-  color: 15px;
+.titleh1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 4em;
+  line-height: 0.1em;
+  text-align: center;
+  font-weight: 700;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 5px;
+  background-color: #ddd;
+  padding: 32px 0px;
+}
+
+.nav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #333;
+}
+.navs2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-inline-start: 40px;
+}
+ul li {
+  display: inline-block;
+  padding: 0.6rem;
+  font-family: "Roboto Mono", monospace;
+}
+.test a {
+  color: rgb(106, 106, 106);
+}
+.test a:hover {
+  color: #2d2d2d;
+  transition: 0.5s;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+ul li a:hover {
+  text-decoration: none;
+  color: #9d9b9b;
+  transition: 0.5s;
+}
+@media screen and (max-width: 625px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* articles cards */
+
+#artigos {
+  float: left;
+  position: relative;
+  left: 50%;
+}
+
+#article {
+  float: left;
+  position: relative;
+  left: -48%;
+  width: 380px;
+  min-height: 620px;
+  display: inline-block;
+  background: white;
+  margin-top: 120px;
+  margin-right: 45px;
+  border-radius: 10px;
+  box-shadow: 0px 55px 60px 0px rgba(0, 0, 0, 0.27);
+  transition: 1s;
+}
+
+#article img {
+  border-radius: 10px 10px 0px 0px;
+}
+
+#article h1 {
+  font-family: "Vidaloka", sans-serif;
+  font-weight: 100;
+  font-size: 45px;
+  padding: 0px 30px 0px 30px;
+}
+
+#readmore {
+  color: black !important;
+  margin-top: 30px;
+}
+
+#article p {
+  color: #444444;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 0px 10px 0px 30px;
+}
+
+#article:hover {
+  transition: 1s;
+  transform: scale(1.01);
 }

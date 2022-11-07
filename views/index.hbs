@@ -1,10 +1,31 @@
-<h1>{{appTitle}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
+<article>
+  <h1 class="titleh1">Frontline Portugal 📰</h1>
+  <div class="time">
+    <time>Monday, november, 7th, 2022</time>
+  </div>
 
-{{! This is the homepage  }}
+</article>
+<nav>
+  <ul class="nav navs navs2">
+    <li><a href="#">Home Page</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Sports</a></li>
+    <li><a href="#">Articles</a></li>
+    <li><a href="#">Contact </a></li>
+    <li class="test"><a href="/auth/login">Login</a></li>
 
-<a href="/news/create">Create News</a>
+  </ul>
+  <a href="/auth/signup">Sign Up</a>
+  <a href="/auth/logout">Logout</a>
 
+</nav>
 
-<a href="/auth/signup">Sign Up</a>
-<a href="/auth/login">Login</a>
+<div id="artigos">
+    {{#each news}}
+     <div id="article">
+     <img src="{{enclosure.0.$.url}}">
+     <h1>{{title}}</h1>
+     <a href="{{link}}">Read More</a>
+     </div>
+    {{/each}}
+  </div>
