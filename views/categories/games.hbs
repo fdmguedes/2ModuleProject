@@ -1,0 +1,44 @@
+{{! Sudoku }}
+<link rel="stylesheet" href=" /stylesheets/games.css" />
+
+<header>
+  <nav>
+    <div>
+      <div class="time">
+        <p class="item paper">Sudoku! Good luck!</p>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<nav>
+  <ul class="nav navs navs2">
+    <li><a href="/">Home Page</a></li>
+    <li><a href="/categories/economy">Economy</a></li>
+    <li><a href="/categories/sports">Sports</a></li>
+    <li><a href="/news/list">Articles</a></li>
+    <li><a class="active" href="/categories/games">Sudoku</a></li>
+    {{#unless currentUser}}
+      <li class="test"><a href="/auth/login">Login</a></li>
+    {{/unless}}
+    {{#if currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
+      <li class="test"><a href="/auth/logout">Logout</a></li>
+
+    {{/if}}
+  </ul>
+  {{#if currentUser}}
+    {{!  <a href="/auth/logout">Logout</a> }}
+    {{! <a href="/auth/signup">Sign Up</a> }}
+
+  {{/if}}
+</nav>
+
+<div class="sudoku">
+  <iframe
+    src="http://www.free-sudoku.com/sudoku-webmaster.php?mescandi1=0&fondspage=FFFFFF&lesliens=000000&coubo1=A63A10&couli1=DBC090&coucp1=FFF9DF&counp1=18202B&counn1=405471&couce1=FFFFFF&coune1=FF0000&coucr1=FFFFFF&hauteur111=750"
+    width="500"
+    height="562"
+    frameborder="0"
+  ></iframe><noframes><a href="http://www.free-sudoku.com">Sudoku</a></noframes>
+</div>

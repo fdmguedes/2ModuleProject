@@ -262,6 +262,8 @@ ul li a:hover {
 /* Style the active class (and buttons on mouse-over) */
 .active,
 .a:hover {
-  
   font-weight: bolder;
 }
+
+/* FOOTER CSS */
+

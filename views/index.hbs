@@ -1,9 +1,3 @@
-{{! <article>
-  <h1 class="titleh1">Frontline Portugal 📰</h1>
-  <div class="time">
-    <time>Monday 7th November, 2022</time>
-  </div>
-</article> }}
 
 <header>
   <nav>
@@ -24,7 +18,7 @@
     <li><a href="/categories/economy">Economy</a></li>
     <li><a href="/categories/sports">Sports</a></li>
     <li><a href="/news/list">Articles</a></li>
-    <li><a href="/categories/contact">Contact </a></li>
+    <li><a href="/categories/games">Sudoku</a></li>
     {{#unless currentUser}}
       <li class="test"><a href="/auth/login">Login</a></li>
     {{/unless}}
@@ -44,7 +38,7 @@
 <div class="row">
   {{#each news}}
     <div class="col-sm-3">
-      <div class="card" style="width: 22rem;">
+      <div class="card" style="width: 19rem;">
 
         <img
           class="card-img-top"
@@ -61,3 +55,4 @@
     </div>
   {{/each}}
 </div>
+
