@@ -1,25 +1,64 @@
-<h1>Articles</h1>
+<link rel="stylesheet" href=" /stylesheets/news.css" />
 
-<hr />
+<header>
+  <nav>
+    <div>
+      <h1 class="titleh1">Frontline Portugal 📰</h1>
+      <div class="time">
+        <p class="item paper">User's Articles</p>
+      </div>
+    </div>
+  </nav>
+</header>
 
-<div class='row'>
+<nav>
+  <ul class="nav navs navs2">
+    <li><a href="/">Home Page</a></li>
+    <li><a href="/categories/economy">Economy</a></li>
+    <li><a href="/categories/sports">Sports</a></li>
+    <li><a class="active" href="/news/list">Articles</a></li>
+    <li><a href="#">Contact </a></li>
+    {{#unless currentUser}}
+      <li class="test"><a href="/auth/login">Login</a></li>
+    {{/unless}}
+    {{#if currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
+      <li class="test"><a href="/auth/logout">Logout</a></li>
+
+    {{/if}}
+  </ul>
+  {{#if currentUser}}
+    {{!  <a href="/auth/logout">Logout</a> }}
+    {{! <a href="/auth/signup">Sign Up</a> }}
+
+  {{/if}}
+</nav>
+
+<div class="cards">
   {{#each news}}
-    <div class='col-md-4 mb-5'>
-      <div class='card' style='width: 18rem'>
-        <div class='card-top'>
-          <img src='{{imageUrl}}' alt='{{title}}' />
+    <a class="card">
+      <div class="card-hero">
+        <img src="{{imageUrl}}" alt="{{title}}" width="288" />
+      </div>
+      <div class="card-header">
+        <h3>{{title}}</h3>
+      </div>
+      <div class="card-body">
+        <p>{{description}}</p>
+      </div>
+      <div class="card-footer">
+        <div class="footer-item">
+          <img
+            src="https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDI3Nzc5MQ&ixlib=rb-1.2.1&q=85"
+            class="avatar"
+            width="32"
+            height="32"
+          />
         </div>
-        <div class='card-body'>
-          <h5 class='card-title'>{{title}}</h5>
-          <p class='card-text'>{{description}}</p>
-          <p>By: {{author.username}}</p>
-          <form action="/edit/{{_id}}" method="post">
-          <a href='/news/edit/{{_id}}' class='btn btn-primary'>Edit</a>
-          </form>
+        <div class="footer-item">
+          <strong>By: {{author.username}}</strong>
         </div>
       </div>
-
-    </div>
+    </a>
   {{/each}}
-
 </div>

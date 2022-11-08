@@ -1,31 +1,63 @@
-<article>
+{{! <article>
   <h1 class="titleh1">Frontline Portugal 📰</h1>
   <div class="time">
-    <time>Monday, november, 7th, 2022</time>
+    <time>Monday 7th November, 2022</time>
   </div>
+</article> }}
 
-</article>
+<header>
+  <nav>
+    <div>
+      <h1 class="titleh1">Frontline Portugal 📰</h1>
+      <div class="time">
+        <p class="item date">www.frontlineportugal.com</p>
+        <p class="item paper">The best source for Portuguese information</p>
+        <p class="item temperature">Tuesday, 8th November, 2022</p>
+      </div>
+    </div>
+  </nav>
+</header>
+
 <nav>
   <ul class="nav navs navs2">
-    <li><a href="#">Home Page</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Sports</a></li>
-    <li><a href="#">Articles</a></li>
-    <li><a href="#">Contact </a></li>
-    <li class="test"><a href="/auth/login">Login</a></li>
+    <li><a class="active" href="#">Home Page</a></li>
+    <li><a href="/categories/economy">Economy</a></li>
+    <li><a href="/categories/sports">Sports</a></li>
+    <li><a href="/news/list">Articles</a></li>
+    <li><a href="/categories/contact">Contact </a></li>
+    {{#unless currentUser}}
+      <li class="test"><a href="/auth/login">Login</a></li>
+    {{/unless}}
+    {{#if currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
+      <li class="test"><a href="/auth/logout">Logout</a></li>
 
+    {{/if}}
   </ul>
-  <a href="/auth/signup">Sign Up</a>
-  <a href="/auth/logout">Logout</a>
+  {{#if currentUser}}
+    {{!  <a href="/auth/logout">Logout</a> }}
+    {{! <a href="/auth/signup">Sign Up</a> --}}
 
+  {{/if}}
 </nav>
 
-<div id="artigos">
-    {{#each news}}
-     <div id="article">
-     <img src="{{enclosure.0.$.url}}">
-     <h1>{{title}}</h1>
-     <a href="{{link}}">Read More</a>
-     </div>
-    {{/each}}
-  </div>
+<div class="row">
+  {{#each news}}
+    <div class="col-sm-3">
+      <div class="card" style="width: 22rem;">
+
+        <img
+          class="card-img-top"
+          src="{{enclosure.0.$.url}}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+          <a target="_blank" href="{{link}}" class="btn btn-primary">Read More</a>
+        </div>
+
+      </div>
+    </div>
+  {{/each}}
+</div>

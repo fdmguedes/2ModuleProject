@@ -1,4 +1,35 @@
-{{!-- this file is only shown whenever there is an error during log out --}}
+{{! this file is only shown whenever there is an error during log out }}
 {{#if errorMessage}}
-    {{errorMessage}}
+  {{errorMessage}}
 {{/if}}
+
+{{!-- <div class="wrapper">
+  <form action="/auth/login" method="POST">
+    <h1>Hello Again!</h1>
+    <p>Welcome back you've <br /> been missed!</p>
+    <form>
+      <input type="text" name="username" placeholder="Enter username" />
+      <input type="email" name="email" placeholder="Enter email" />
+      <input type="password" placeholder="Your Password" />
+      <p class="recover">
+        <a href="#">Recover Password</a>
+      </p>
+    </form>
+    <button type="submit">Sign in</button>
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+    <p class="or">
+      <span>----- or continue with -----</span>
+    </p>
+    <div class="icons">
+      <i class="fab fa-google"></i>
+      <i class="fab fa-github"></i>
+      <i class="fab fa-facebook"></i>
+    </div>
+    <div class="not-member">
+      Not a member?
+      <a href="#">Register Now</a>
+    </div>
+  </form>
+</div> --}}
