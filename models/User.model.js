@@ -26,7 +26,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String, 
-      default: 'https://cdn.dribbble.com/users/1165166/screenshots/3394646/media/d7adc8caca2611cd33ea23061df411fc.png'
+      default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxq1lP-3WfX0CFzcRFTDSSreYl9snnPr-oSQ&usqp=CAU'
     },
   },
   {
