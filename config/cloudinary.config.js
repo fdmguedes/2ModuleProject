@@ -11,7 +11,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary,
   params: {
-    allowed_formats: ['png', 'jpg', 'gif', 'jpeg'],
+    allowed_formats: ['png', 'jpg', 'gif', 'jpeg', "webp"],
     folder: 'News',
   },
 });

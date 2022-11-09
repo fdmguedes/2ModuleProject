@@ -5,18 +5,6 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-
-router.get('/delete/:id', async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    await News.findByIdAndDelete(id);
-    res.redirect('/news/list');
-  } catch (error) {
-    console.log(error);
-    next(error);
-  }
-});
-
 router.get('/create', isLoggedIn, (req, res) => res.render('news/create'));
 
 router.post('/create', fileUploader.single('imageUrl'), async (req, res, next) => {
@@ -83,5 +71,15 @@ router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) =>
 });
 
 
+router.get('/delete/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    await News.findByIdAndDelete(id);
+    res.redirect('/news/list');
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
 
 module.exports = router;

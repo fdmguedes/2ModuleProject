@@ -5,7 +5,7 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      required: false,
+      required: true,
       unique: true,
       trim: true,
     },
@@ -20,9 +20,17 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    ocupation: {
+      type: String,
+      required: false,
+    },
+    image: {
+      type: String, 
+      default: 'https://cdn.dribbble.com/users/1165166/screenshots/3394646/media/d7adc8caca2611cd33ea23061df411fc.png'
+    },
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
+    // uesername, email, password, ocupation, date (joined)
     timestamps: true,
   }
 );
