@@ -20,5 +20,7 @@ router.get("/", async (req, res, next) => {
  /*  console.log(jsonResult.item[0].enclosure); */
   res.render("index", { news: jsonResult.item, currentUser });
 });
+const date = new Date(Date.now());
+
 
 module.exports = router;
