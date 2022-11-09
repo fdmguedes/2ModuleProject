@@ -20,7 +20,7 @@ router.get('/edit/:id', async (req, res, next) => {
     const { id } = req.params;
     try {
       const user = await User.findById(id);
-      res.render('profile/edit',user);
+      res.render('profile/edit', {user});
     } catch (error) {
       console.log(error);
       next(error);

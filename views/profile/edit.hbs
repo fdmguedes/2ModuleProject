@@ -1,11 +1,11 @@
 <h2>Edit the Profile</h2>
 
 <div class='row'>
-  <form action='/profile/edit/{{_id}}' method='post' enctype='multipart/form-data'>
+  <form action='/profile/edit/{{user._id}}' method='post' enctype='multipart/form-data'>
     <div class='form-group'>
       <label for='username'>
         Username:
-        <input type='text' name='username' class='form-control' value='{{username}}' />
+        <input type='text' name='username' class='form-control' value='{{user.username}}' />
       </label>
     </div>
     <div class='form-group'>
@@ -16,12 +16,12 @@
           cols='30'
           rows='10'
           class='form-control'
-        >{{ocupation}}</textarea>
+        >{{user.ocupation}}</textarea>
       </label>
     </div>
     
     
-    <input type='text' value='{{image}}' name='currentImage' hidden />
+    <input type='text' value='{{user.image}}' name='currentImage' hidden />
 
     <div class='form-group'>
       <label for='image'>

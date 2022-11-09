@@ -37,7 +37,8 @@
 
 <div class="cards">
   {{#each news}}
-    <a class="card">
+
+    <div class="card">
       <div class="card-hero">
         <img src="{{imageUrl}}" alt="{{title}}" width="288" />
       </div>
@@ -48,16 +49,15 @@
         <p>{{description}}</p>
       </div>
       <div class="card-footer">
-        <div class="footer-item">
-          <img src="{{author.image}}" class="avatar" width="32" height="32" />
-        </div>
-        <div> <form action="/edit/{{_id}}" method="post">
-          <a href='/news/edit/{{_id}}' class='btn btn-primary'>Edit Article</a>
-           </div>
-        <div class="footer-item">
-          <strong>By: {{author.username}}</strong>
-        </div>
+
+        <img src="{{author.image}}" class="avatar" width="32" height="32" />
+        <strong>By: {{author.username}}</strong>
+
+        {{#ifEquals author._id @root.currentUser._id}}
+          <a href="/news/edit/{{_id}}" class="btn btn-primary">Edit Article</a>
+        {{/ifEquals}}
       </div>
-    </a>
+    </div>
+
   {{/each}}
 </div>
