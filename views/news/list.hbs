@@ -19,11 +19,11 @@
     <li><a class="active" href="/news/list">Articles</a></li>
     <li><a href="#">Contact </a></li>
     {{#unless currentUser}}
-      <li class="test"><a href="/auth/login">Login</a></li>
+      <li class="test"><a href="/profile">Profile</a></li>
     {{/unless}}
     {{#if currentUser}}
       <li class="test"><a href="/news/create">Create</a></li>
-      <li class="test"><a href="/auth/logout">Logout</a></li>
+      <li class="test"><a href="/profile">Profile</a></li>
 
     {{/if}}
   </ul>
@@ -49,7 +49,7 @@
       <div class="card-footer">
         <div class="footer-item">
           <img
-            src="https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDI3Nzc5MQ&ixlib=rb-1.2.1&q=85"
+            src="{{author.image}}"
             class="avatar"
             width="32"
             height="32"
