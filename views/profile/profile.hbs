@@ -1,24 +1,89 @@
-<h1>Profile</h1>
+<link rel="stylesheet" href=" /stylesheets/profile.css" />
+<nav>
+  <ul class="nav navs navs2">
+    <li><a class="active" href="/">Home Page</a></li>
+    <li><a href="/categories/economy">Economy</a></li>
+    <li><a href="/categories/sports">Sports</a></li>
+    <li><a href="/news/list">Articles</a></li>
+    <li><a href="/categories/games">Sudoku</a></li>
+    {{#unless currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
+    {{/unless}}
+    {{#if currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
 
-<hr />
+    {{/if}}
+  </ul>
 
-<div class='row'>
-    <div class='col-md-4 mb-5'>
-     <div class='card-body'>
-          <h5 class='card-title'>{{username}}</h5>
-            <div class='card' style='width: 18rem'>
-        <div class='card-top'>
-          <img src='{{image}}' alt='{{username}}' />
+</nav>
+
+{{!-- 
+<div class="row">
+  <div class="col-md-4 mb-5">
+    <div class="card-body">
+      <h5 class="card-title">{{username}}</h5>
+      <div class="card" style="width: 18rem">
+        <div class="card-top">
+          <img src="{{image}}" alt="{{username}}" />
         </div>
-          <p class='card-text'>Occupation: {{ocupation}}</p>
-          <p class='card-text'>Email: {{email}}</p>
-          <form action="/edit/{{_id}}" method="post">
-          <a href='/profile/edit/{{_id}}' class='btn btn-primary'>Edit Profile</a>
+        <p class="card-text">Occupation: {{ocupation}}</p>
+        <p class="card-text">Email: {{email}}</p>
+        <form action="/edit/{{_id}}" method="post">
+          <a href="/profile/edit/{{_id}}" class="btn btn-primary">Edit Profile</a>
           <a href="/auth/logout">Logout</a>
-          </form>
-        </div>
+        </form>
       </div>
-
     </div>
 
-</div>
+  </div>
+
+</div> --}}
+<section class="vh-100" style="background-color: #f4f5f7;">
+  <div class="container py-5 h-100">
+    <div class="time">
+      <p class="item paper">My Profile</p>
+
+      
+    </div>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div
+              class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;"
+            >
+              <img
+                src="{{image}}"
+                alt="Avatar"
+                class="img-fluid my-4"
+                style="width: 100px;"
+              />
+              <h5>{{username}}</h5>
+              <p>{{ocupation}}</p>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Information</h6>
+                <hr class="mt-0 mb-4" />
+                <div class="row pt-1">
+                  <div class="col-12 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted">{{email}}</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                  <form action="/edit/{{_id}}" method="post">
+                    <a href="/profile/edit/{{_id}}" class="btn btn-primary">Edit
+                      Profile</a>
+                    <a class="btn btn-primary" href="/auth/logout">Logout</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

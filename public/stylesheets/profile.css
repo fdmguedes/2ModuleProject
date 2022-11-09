@@ -1,0 +1,35 @@
+body {
+  overflow: hidden;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f6d365;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right bottom,
+    rgb(116, 115, 115),
+    rgb(52, 51, 51)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right bottom,
+    rgb(116, 115, 115),
+    rgb(52, 51, 51)
+  );
+}
+
+.time {
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  border: none;
+  font-size: 3.5em;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  margin-bottom: -100px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+}

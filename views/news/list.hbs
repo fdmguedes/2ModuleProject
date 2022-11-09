@@ -17,12 +17,13 @@
     <li><a href="/categories/economy">Economy</a></li>
     <li><a href="/categories/sports">Sports</a></li>
     <li><a class="active" href="/news/list">Articles</a></li>
-    <li><a href="#">Contact </a></li>
+    <li><a href="/categories/games">Sudoku</a></li>
     {{#unless currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
       <li class="test"><a href="/profile">Profile</a></li>
     {{/unless}}
     {{#if currentUser}}
-      <li class="test"><a href="/news/create">Create</a></li>
+
       <li class="test"><a href="/profile">Profile</a></li>
 
     {{/if}}
@@ -48,12 +49,7 @@
       </div>
       <div class="card-footer">
         <div class="footer-item">
-          <img
-            src="{{author.image}}"
-            class="avatar"
-            width="32"
-            height="32"
-          />
+          <img src="{{author.image}}" class="avatar" width="32" height="32" />
         </div>
         <div class="footer-item">
           <strong>By: {{author.username}}</strong>
