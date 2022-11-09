@@ -1,0 +1,39 @@
+.time {
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  font-size: 3em;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+}
+
+#header {
+  height: 200px;
+  margin: 0;
+}
+
+#header h1 {
+  color: rgb(66, 65, 65);
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+  padding: 20px 50px 0 50px;
+  font-size: 75px;
+}
+
+#header p {
+  display: table;
+  color: #999;
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  font-size: 30px;
+}
+
+

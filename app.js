@@ -29,12 +29,18 @@ app.use("/", indexRoutes);
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
-const newsRoutes = require('./routes/news.routes');
-app.use('/news', newsRoutes);
-const profileRoutes = require('./routes/profile.routes');
-app.use('/profile', profileRoutes);
+const newsRoutes = require("./routes/news.routes");
+app.use("/news", newsRoutes);
+const sportsRoutes = require("./routes/sports.routes");
+app.use("/categories", sportsRoutes);
+const economyRoutes = require("./routes/economy.routes");
+app.use("/categories", economyRoutes);
+const gamesRoutes = require("./routes/games.routes");
+app.use("/categories", gamesRoutes);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
+
+// testing navbar highlight
 
 module.exports = app;
