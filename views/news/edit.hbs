@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+{{!-- <h2>Edit the Article</h2>
+=======
 
 <h2>Edit the Article</h2>
+>>>>>>> 4706508b294c6e888222f498e4f923468be1b7ce
 
 <div class='row'>
   <form action='/news/edit/{{_id}}' method='post' enctype='multipart/form-data'>
@@ -30,4 +34,53 @@
     <button type='submit' class='btn btn-primary'>Edit Article</button>
     <button type='submit'><a href="/news/delete/{{_id}}">Delete Article</a></button>
   </form>
+</div> --}}
+<h2 class="articleh2">Edit an article</h2>
+
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    <form
+      action="/news/edit/{{id}}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div class="formbold-mb-5">
+        <label for="title" class="formbold-form-label font-weight-bold">
+          Article Title
+        </label>
+        <input
+          type="text"
+          name="title"
+          id="name"
+          placeholder="Title"
+          class="formbold-form-input"
+          value="{{title}}"
+        
+        />
+      </div>
+       <input type='text' value='{{imageUrl}}' name='currentImage' hidden />
+
+      <div class="formbold-mb-5">
+        <label for="image" class="formbold-form-label font-weight-bold">
+          Add an image:
+           <input type="file" name="image" class="formbold-form-input" />
+        </label>
+      
+      </div>
+
+      <div class="formbold-mb-5">
+        <label for="description" class="formbold-form-label font-weight-bold">
+          Description
+        </label>
+        <textarea
+          rows="6"
+          name="description"
+          id="message"
+          placeholder="Type your article here"
+          class="formbold-form-input"
+          >{{description}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-dark">Edit Article</button>
+      <button type='submit'><a class="btn btn-dark" href="/news/delete/{{_id}}">Delete Article</a></button>
+    </form>
 </div>

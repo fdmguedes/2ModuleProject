@@ -28,7 +28,7 @@ router.get('/edit/:id', async (req, res, next) => {
   });
 
 router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) => {
-    const { username, ocupation, currentImage } = req.body;
+    const { username, ocupation, currentImage, email } = req.body;
     const { id } = req.params;
     try {
       let image;
@@ -39,7 +39,7 @@ router.post('/edit/:id', fileUploader.single('image'), async (req, res, next) =>
         image = currentImage;
       }
   
-      await User.findByIdAndUpdate(id, { username, ocupation, image });
+      await User.findByIdAndUpdate(id, { username, ocupation, image, email });
      
       res.redirect('/profile');
   
