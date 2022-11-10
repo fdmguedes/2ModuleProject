@@ -13,13 +13,14 @@
 
 <nav>
   <ul class="nav navs navs2">
-    <li><a href="/">Home Page</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="/categories/economy">Economy</a></li>
     <li><a href="/categories/sports">Sports</a></li>
     <li><a class="active" href="/news/list">Articles</a></li>
     <li><a href="/categories/games">Sudoku</a></li>
+    <li class="test"><a href="/news/create">Create</a></li>
     {{#unless currentUser}}
-      <li class="test"><a href="/news/create">Create</a></li>
+
       <li class="test"><a href="/profile">Profile</a></li>
     {{/unless}}
     {{#if currentUser}}
@@ -35,29 +36,23 @@
   {{/if}}
 </nav>
 
-<div class="cards">
+<div class="row">
   {{#each news}}
-
-    <div class="card">
-      <div class="card-hero">
-        <img src="{{imageUrl}}" alt="{{title}}" width="288" />
-      </div>
-      <div class="card-header">
-        <h3>{{title}}</h3>
-      </div>
-      <div class="card-body">
-        <p>{{description}}</p>
-      </div>
-      <div class="card-footer">
-
-        <img src="{{author.image}}" class="avatar" width="32" height="32" />
-        <strong>By: {{author.username}}</strong>
-
-        {{#ifEquals author._id @root.currentUser._id}}
-          <a href="/news/edit/{{_id}}" class="btn btn-primary">Edit Article</a>
-        {{/ifEquals}}
+    <div class="col-sm-3">
+      <div class="card">
+        <img class="card-img-top" src="{{imageUrl}}" alt="{{title}}" />
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+        </div>
+        <div class="card-body">
+          <img src="{{author.image}}" class="avatar" />
+          <strong>By: {{author.username}}</strong>
+          {{#ifEquals author._id @root.currentUser._id}}
+            <a href="/news/edit/{{_id}}" class="btn btn-primary">Edit Article</a>
+          {{/ifEquals}}
+        </div>
       </div>
     </div>
-
   {{/each}}
 </div>

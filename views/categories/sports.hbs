@@ -14,7 +14,7 @@
 
 <nav>
   <ul class="nav navs navs2">
-    <li><a href="/">Home Page</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="/categories/economy">Economy</a></li>
     <li><a class="active" href="/categories/sports">Sports</a></li>
     <li><a href="/news/list">Articles</a></li>
@@ -28,17 +28,18 @@
 
     {{/if}}
   </ul>
-  {{#if currentUser}}
-    {{!  <a href="/auth/logout">Logout</a> }}
-    {{! <a href="/auth/signup">Sign Up</a> }}
 
-  {{/if}}
+  {{!  <a href="/auth/logout">Logout</a> }}
+  {{! <a href="/auth/signup">Sign Up</a> }}
+
 </nav>
-
+<div class="bottom">
+  <a href="#bottom">Click here to check football LiveScores</a>
+</div>
 <div class="row">
   {{#each sports}}
     <div class="col-sm-3">
-      <div class="card" style="width: 19rem;">
+      <div class="card">
 
         <img
           class="card-img-top"
@@ -63,6 +64,7 @@
 {{! Sports API }}
 
 <iframe
+  id="bottom"
   src="https://www.scorebat.com/embed/livescore/"
   frameborder="0"
   width="600"
