@@ -1,12 +1,269 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #383838;
+  padding: 20px;
 }
 
-a {
-  color: #00b7ff;
+.time {
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  font-size: 1.4em;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
 }
 
-h1 {
-  color: 15px;
+.titleh1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 4em;
+  line-height: 0.1em;
+  text-align: center;
+  font-weight: 700;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 5px;
+  background-color: #ddd;
+  padding: 32px 0px;
 }
+
+.nav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #333;
+}
+
+.navs2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-inline-start: 40px;
+}
+ul li {
+  display: inline-block;
+  padding: 0.6rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.2em;
+}
+.test a {
+  color: rgb(106, 106, 106);
+}
+.test a:hover {
+  color: #2d2d2d;
+  transition: 0.5s;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+ul li a:hover {
+  text-decoration: none;
+  color: #9d9b9b;
+  transition: 0.5s;
+}
+@media screen and (max-width: 625px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* articles cards */
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 0 1 32%;
+  margin: 1rem 0.25em;
+}
+
+/* login */
+
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  width: 330px;
+  padding: 2rem 0 1rem 0;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.loginh1 {
+  font-size: 2rem;
+  color: #07001f;
+}
+.plogin {
+  margin-bottom: 1.7rem;
+}
+.loginform input {
+  width: 85%;
+  outline: none;
+  border: none;
+  background: #dfe9f5;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.recover {
+  text-align: right;
+  font-size: 0.8rem;
+  margin: 0.2rem 1.7rem 0 0;
+}
+.recoverlogina {
+  text-decoration: none;
+  color: #07001f;
+}
+.loginbutton {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 85%;
+  background: rgb(130, 129, 129);
+  color: #fff;
+  cursor: pointer;
+}
+.loginbutton:hover {
+  background: rgba(46, 45, 45, 0.767);
+}
+
+.not-member {
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+}
+.not-member a {
+  color: tomato;
+  text-decoration: none;
+}
+.logina:hover {
+  text-decoration: underline;
+}
+
+/* news form */
+
+.formbold-mb-5 {
+  margin-bottom: 20px;
+}
+.formbold-pt-3 {
+  padding-top: 12px;
+}
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  font-family: "Inter", sans-serif;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+}
+.formbold-form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  color: #07074d;
+  margin-bottom: 12px;
+}
+.formbold-form-label-2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.articleh2 {
+  text-align: center;
+  color: #0e0e10;
+  font-size: 40px;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6b7280;
+  outline: none;
+  resize: none;
+}
+.formbold-form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  background-color: #585498;
+  color: white;
+  cursor: pointer;
+}
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold--mx-3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.formbold-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.w-full {
+  width: 100%;
+}
+@media (min-width: 540px) {
+  .sm\:w-half {
+    width: 50%;
+  }
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active,
+.a:hover {
+  font-weight: bolder;
+}
+
+/* FOOTER CSS */
+

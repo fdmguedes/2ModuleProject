@@ -1,1 +1,79 @@
-{{!-- Display news from API related to the category  --}}
+{{! Display news from API related to the category  }}
+<link rel="stylesheet" href=" /stylesheets/sports.css" />
+
+<header>
+  <nav>
+    <div>
+      <h1 class="titleh1">Frontline Portugal 📰</h1>
+      <div class="time">
+        <p class="item paper">Sports</p>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<nav>
+  <ul class="nav navs navs2">
+    <li><a href="/">Home Page</a></li>
+    <li><a href="/categories/economy">Economy</a></li>
+    <li><a class="active" href="/categories/sports">Sports</a></li>
+    <li><a href="/news/list">Articles</a></li>
+    <li><a href="/categories/games">Sudoku </a></li>
+    {{#unless currentUser}}
+      <li class="test"><a href="/auth/login">Login</a></li>
+    {{/unless}}
+    {{#if currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
+      <li class="test"><a href="/profile">Profile</a></li>
+
+    {{/if}}
+  </ul>
+  {{#if currentUser}}
+    {{!  <a href="/auth/logout">Logout</a> }}
+    {{! <a href="/auth/signup">Sign Up</a> }}
+
+  {{/if}}
+</nav>
+
+<div class="row">
+  {{#each sports}}
+    <div class="col-sm-3">
+      <div class="card" style="width: 19rem;">
+
+        <img
+          class="card-img-top"
+          src="{{enclosure.0.$.url}}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+          <a target="_blank" href="{{link}}" class="btn btn-primary">Read More</a>
+        </div>
+
+      </div>
+    </div>
+  {{/each}}
+</div>
+<hr />
+<div class="sportstitle">
+  <h1>LiveScores</h1>
+</div>
+
+{{! Sports API }}
+
+<iframe
+  src="https://www.scorebat.com/embed/livescore/"
+  frameborder="0"
+  width="600"
+  height="760"
+  allowfullscreen
+  allow="autoplay; fullscreen"
+  style="width:100%;height:760px;overflow:hidden;display:block;"
+  class="_scorebatEmbeddedPlayer_"
+></iframe><script>(function(d, s, id) { var js, fjs =
+  d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js =
+  d.createElement(s); js.id = id; js.src =
+  'https://www.scorebat.com/embed/embed.js?v=arrv';
+  fjs.parentNode.insertBefore(js, fjs); }(document, 'script',
+  'scorebat-jssdk'));</script>

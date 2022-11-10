@@ -1,1 +1,97 @@
-{{!-- Display news from API related to the category  --}}
+{{! Display news from API related to the category  }}
+
+{{!-- <div class="cards">
+  {{#each economy}}
+    <article class="card">
+      <img src="{{enclosure.0.$.url}}" />
+      <h1>{{title}}</h1>
+      <a href="{{link}}">Read More</a>
+    </article>
+  {{/each}}
+</div> --}}
+
+<link rel="stylesheet" href=" /stylesheets/economy.css" />
+
+<header>
+  <nav>
+    <div>
+      <h1 class="titleh1">Frontline Portugal 📰</h1>
+      <div class="time">
+        <p class="item paper">Economy</p>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<nav>
+  <ul class="nav navs navs2">
+    <li><a href="/">Home Page</a></li>
+    <li><a class="active" href="/categories/economy">Economy</a></li>
+    <li><a href="/categories/sports">Sports</a></li>
+    <li><a href="/news/list">Articles</a></li>
+    <li><a href="/categories/games">Sudoku</a></li>
+    {{#unless currentUser}}
+      <li class="test"><a href="/auth/login">Login</a></li>
+    {{/unless}}
+    {{#if currentUser}}
+      <li class="test"><a href="/news/create">Create</a></li>
+      <li class="test"><a href="/profile">Profile</a></li>
+
+    {{/if}}
+  </ul>
+  {{#if currentUser}}
+    {{!  <a href="/auth/logout">Logout</a> }}
+    {{! <a href="/auth/signup">Sign Up</a> }}
+
+  {{/if}}
+</nav>
+
+{{! STOCK }}
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a
+      href="https://www.tradingview.com/markets/"
+      rel="noopener"
+      target="_blank"
+    ></div>
+  <script
+    type="text/javascript"
+    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+    async
+  >
+    { "symbols": [ { "proName": "FOREXCOM:NSXUSD", "title": "US 100" }, {
+    "proName": "FX_IDC:EURUSD", "title": "EUR/USD" }, { "proName":
+    "BITSTAMP:BTCUSD", "title": "Bitcoin" }, { "proName": "BITSTAMP:ETHUSD",
+    "title": "Ethereum" }, { "description": "GBP/USD", "proName": "FX:GBPUSD" },
+    { "description": "VND/USD", "proName": "FX_IDC:VNDUSD" }, { "description":
+    "TESLA", "proName": "NASDAQ:TSLA" }, { "description": "META", "proName":
+    "NASDAQ:META" }, { "description": "Microsoft", "proName": "NASDAQ:MSFT" }, {
+    "description": "Amazon", "proName": "NASDAQ:AMZN" } ], "showSymbolLogo":
+    true, "colorTheme": "dark", "isTransparent": false, "displayMode":
+    "compact", "locale": "en" }
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+<div class="row">
+  {{#each economy}}
+    <div class="col-sm-3">
+      <div class="card" style="width: 19rem;">
+
+        <img
+          class="card-img-top"
+          src="{{enclosure.0.$.url}}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+          <a target="_blank" href="{{link}}" class="btn btn-primary">Read More</a>
+        </div>
+
+      </div>
+    </div>
+  {{/each}}
+</div>

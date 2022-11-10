@@ -5,10 +5,10 @@ const axios = require("axios");
 const User = require("../models/User.model");
 
 /* GET home page */
-router.get("/", async (req, res, next) => {
+router.get("/economy", async (req, res, next) => {
   const currentUser = req.session.currentUser;
-  // console.log(currentUser);
-  const response = await axios.get("http://feeds.jn.pt/JN-Ultimas");
+  console.log(currentUser);
+  const response = await axios.get("http://feeds.dinheirovivo.pt/DV-Ultimas");
   const xml = response.data;
   let jsonResult;
 
@@ -18,9 +18,7 @@ router.get("/", async (req, res, next) => {
   });
 
  /*  console.log(jsonResult.item[0].enclosure); */
-  res.render("index", { news: jsonResult.item, currentUser });
+  res.render("categories/economy", { economy: jsonResult.item, currentUser });
 });
-const date = new Date(Date.now());
-
 
 module.exports = router;

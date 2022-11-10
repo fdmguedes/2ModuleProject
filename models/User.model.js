@@ -5,7 +5,7 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      required: false,
+      required: true,
       unique: true,
       trim: true,
     },
@@ -20,9 +20,17 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    ocupation: {
+      type: String,
+      required: false,
+    },
+    image: {
+      type: String, 
+      default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxq1lP-3WfX0CFzcRFTDSSreYl9snnPr-oSQ&usqp=CAU'
+    },
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
+    // uesername, email, password, ocupation, date (joined)
     timestamps: true,
   }
 );

@@ -1,9 +1,14 @@
-<div id="form">
+{{!-- <div id="form">
   <h2>Sign Up</h2>
   <form action="/auth/signup" method="POST">
 
     <label> Username
       <input type="text" name="username" placeholder="Your username" />
+    </label>
+
+  
+    <label> Ocupation
+      <input type="text" name="ocupation" placeholder="Your ocupation" />
     </label>
 
     <label> Email
@@ -17,6 +22,20 @@
     <button type="submit">Sign Up</button>
 
 
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div> --}}
+
+<div class="wrapper">
+  <h1 class="loginh1">Hello!</h1>
+  <p class="plogin">Welcome!<br /> Register to post your own articles.</p>
+  <form action="/auth/signup" method="POST" class="loginform">
+    <input type="text" name="username" placeholder="Enter username" />
+    <input type="email" name="email" placeholder="Enter your email" />
+    <input type="password" name="password" placeholder="Password" />
+    <button class="loginbutton" type="submit">Sign Up</button>
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}

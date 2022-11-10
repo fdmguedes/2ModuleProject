@@ -1,0 +1,11 @@
+body {
+  overflow: hidden;
+}
+
+.sudoku {
+  display: flex;
+  justify-content: center;
+}
+.time {
+  margin-top: -20px;
+}
