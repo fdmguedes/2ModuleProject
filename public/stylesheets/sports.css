@@ -41,3 +41,12 @@
   padding: 10px;
   font-size: 30px;
 }
+
+.bottom {
+  text-align: center;
+}
+
+.bottom > a {
+  text-decoration: none;
+  color: black;
+}

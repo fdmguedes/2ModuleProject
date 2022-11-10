@@ -1,7 +1,7 @@
 <link rel="stylesheet" href=" /stylesheets/profile.css" />
 <nav>
   <ul class="nav navs navs2">
-    <li><a class="active" href="/">Home Page</a></li>
+    <li><a class="active" href="/">Home</a></li>
     <li><a href="/categories/economy">Economy</a></li>
     <li><a href="/categories/sports">Sports</a></li>
     <li><a href="/news/list">Articles</a></li>
@@ -24,6 +24,9 @@
       <label for='username'>
         Username:
         <input type='text' name='username' class='form-control' value='{{user.username}}' />
+           <label for='email'>
+        Email:
+        <input type='email' name='email' class='form-control' value='{{user.email}}' />
       </label>
     </div>
     <div class='form-group'>
@@ -49,7 +52,6 @@
     <button type='submit' class='btn btn-primary'>Edit Profile</button>
   </form>
 </div> --}}
- 
 
 <div class="wrapper">
   <div class="profile">
@@ -89,7 +91,12 @@
         <!-- Description about User -->
 
         <fieldset>
-          <input type="button" class="Btn cancel" value="Cancel" />
+          <a href="/profile"><input
+              type="button"
+              class="Btn cancel"
+              value="Cancel"
+            /></a>
+
           <input type="submit" class="Btn" value="Save Changes" />
         </fieldset>
 
