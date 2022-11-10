@@ -10,6 +10,30 @@ body {
   background-color: #f0f0f0;
   color: #383838;
   padding: 20px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 553px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .time {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .titleh1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 4em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: #ddd;
+  }
+
 }
 
 .time {
@@ -29,7 +53,7 @@ body {
 .titleh1 {
   font-family: "Oswald", sans-serif;
   font-size: 4em;
-  line-height: 0.1em;
+  /* line-height: 0.1em; */
   text-align: center;
   font-weight: 700;
   padding: 0px;
@@ -76,13 +100,6 @@ ul li a:hover {
   text-decoration: none;
   color: #9d9b9b;
   transition: 0.5s;
-}
-@media screen and (max-width: 625px) {
-  .nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 /* articles cards */
@@ -266,4 +283,3 @@ ul li a:hover {
 }
 
 /* FOOTER CSS */
-
