@@ -17,10 +17,13 @@ router.get("/", async (req, res, next) => {
     //console.dir(result.rss.channel);
   });
 
- /*  console.log(jsonResult.item[0].enclosure); */
-  res.render("index", { news: jsonResult.item, currentUser });
+
+let today = new Date().toLocaleDateString('en-uk', { weekday:"long", year:"numeric", month:"long", day:"numeric"}) 
+
+
+  res.render("index", { news: jsonResult.item, currentUser, today });
 });
-const date = new Date(Date.now());
+
 
 
 module.exports = router;
