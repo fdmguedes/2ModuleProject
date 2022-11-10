@@ -41,10 +41,39 @@
   </ul>
   {{#if currentUser}}
     {{!  <a href="/auth/logout">Logout</a> }}
-    {{!-- <a href="/auth/signup">Sign Up</a> --}}
+    {{! <a href="/auth/signup">Sign Up</a> }}
 
   {{/if}}
 </nav>
+
+{{! STOCK }}
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a
+      href="https://www.tradingview.com/markets/"
+      rel="noopener"
+      target="_blank"
+    ></div>
+  <script
+    type="text/javascript"
+    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+    async
+  >
+    { "symbols": [ { "proName": "FOREXCOM:NSXUSD", "title": "US 100" }, {
+    "proName": "FX_IDC:EURUSD", "title": "EUR/USD" }, { "proName":
+    "BITSTAMP:BTCUSD", "title": "Bitcoin" }, { "proName": "BITSTAMP:ETHUSD",
+    "title": "Ethereum" }, { "description": "GBP/USD", "proName": "FX:GBPUSD" },
+    { "description": "VND/USD", "proName": "FX_IDC:VNDUSD" }, { "description":
+    "TESLA", "proName": "NASDAQ:TSLA" }, { "description": "META", "proName":
+    "NASDAQ:META" }, { "description": "Microsoft", "proName": "NASDAQ:MSFT" }, {
+    "description": "Amazon", "proName": "NASDAQ:AMZN" } ], "showSymbolLogo":
+    true, "colorTheme": "dark", "isTransparent": false, "displayMode":
+    "compact", "locale": "en" }
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
 <div class="row">
   {{#each economy}}
