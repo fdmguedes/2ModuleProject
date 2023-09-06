@@ -1,10 +1,9 @@
 # Portugal News' Hub
-
 <br>
 
 ## Description
 
-Plataform to browse, read and post news related to the country of Portugal.
+Portugal News Hub is a full-stack CRUD (Create, Read, Update, Delete) application designed to aggregate news articles from various Portuguese newspapers into a single, unified platform. Built during my time at the Ironhack bootcamp, this project aims to provide readers with a broad perspective on topics ranging from economy and politics to sports by pulling articles from multiple sources. This is an effort to combat the spread of biased information.
 
 <br>
 
@@ -79,15 +78,6 @@ add user id here
 
 <br>
 
-## Packages
-
-<br>
-
-## Backlog
-
-[See the Trello board.](https://trello.com/b/Ni3giVKf/ironhackproject)
-
-<br>
 
 ## Links
 
@@ -101,14 +91,7 @@ The url to your repository and to your deployed project
 
 <br>
 
-### Slides
-
-The url to your presentation slides
-
-[Slides Link]("TO BE DISPLAYED")
 
 ### Contributors
 
 Filipe Guedes- [`<MeerKatPT>`](https://github.com/MeerKatPT) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/filipe--guedes/)
-
-FirstName LastName - [`<github-username>`](https://github.com/person2-username) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/person2-username)
