@@ -94,4 +94,4 @@ The url to your repository and to your deployed project
 
 ### Contributors
 
-Filipe Guedes- [`<MeerKatPT>`](https://github.com/MeerKatPT) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/filipe--guedes/)
+Filipe Guedes- [`<MeerKatPT>`](https://github.com/fdmguedes/) - [`<linkedin-profile-link>`](https://www.linkedin.com/in/filipe--guedes/)
